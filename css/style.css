@@ -30,7 +30,8 @@ time, mark, audio, video {
 }
 
 body {
-	font-family: 'Avenir Next', 'Avenir', sans-serif;
+	font-family: Avenir Next, Avenir, sans-serif;
+	-webkit-font-smoothing: antialiased;
 }
 
 body.dark {
@@ -59,6 +60,14 @@ a:hover {
 .nav.fixed {
 	position: fixed;
 	width: 100vw;
+}
+
+.nav.centered {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	flex-wrap: wrap;
 }
 
 .nav.dark, body.dark .nav {
@@ -212,7 +221,6 @@ a:hover {
 	transition: transform .5s cubic-bezier(.77,.2,.05,1.0);
 	width: 100vw;
 	height: auto;
-	-webkit-font-smoothing: antialiased;
 }
 
 .mob-nav.dark span, body.dark .mob-nav span {
@@ -243,16 +251,9 @@ a:hover {
 /* ==== Sections ==== */
 
 .sec {
-	height: 100vh;
-	display: flex;
-	flex-flow: column wrap;
-	align-items: center;
-	display: -webkit-flex;
-	-webkit-flex-flow: column wrap;
-	-webkit-align-items: center;
-	display: -ms-flex;
-	-ms-flex-flow: column wrap;
-	-ms-align-items: center;
+	height: auto;
+	min-height: calc(100vh + 100px);
+	margin: 20px;
 	box-sizing: border-box;
 }
 
@@ -272,7 +273,7 @@ a:hover {
 	display: flex;
 	display: -ms-flex;
 	display: -webkit-flex;
-	margin: 0 20px 20px;
+	margin: 20px 0 20px 0;
 }
 
 .sec .col {
@@ -302,15 +303,194 @@ a:hover {
 	background-color: #444;
 }
 
-/* ==== Media Queries ==== */
+/* ==== Buttons ==== */
 
-@media screen and (max-width: 950px) {
-	.nav a {
-		padding: 10px;
-	}
+.btn {
+	min-width: 80px;
+	height: 35px;
+	width: auto;
+	background-color: transparent;
+	border: 1px solid #CCC;
+	color: #CCC;
+	cursor: pointer;
+	margin: 10px 5px 10px 5px;
+	transition: all 0.3s;
+	padding: 5px 25px 5px 25px;
+	font-size: 12px;
+	font-family: Avenir Next;
 }
 
-@media screen and (max-width: 750px) {
+.btn.tablet {
+	border-radius: 20px;
+}
+
+.btn.square {
+	border-radius: 5px;
+}
+
+.btn.sml {
+	font-size: 10px;
+}
+
+.btn.med {
+	font-size:  14px;
+}
+
+.btn.lrg {
+	font-size: 16px;
+}
+
+.btn.xlrg {
+	font-size: 18px;
+}
+
+.btn.quote:before {
+    content: "\275D  ";
+}
+
+.btn.quote:after {
+	content: " \275E";
+}
+
+.btn.warning:before {
+	position: relative;
+	content: "\26A0";
+	bottom: -1px;
+	left: -5px;
+}
+
+.btn.close:before {
+    position: relative;
+    content: "\00d7";
+    color: #FFF;
+}
+
+.btn.push {
+	color: black;
+    position: relative;
+    background-color: #CCC;
+    padding: 10px 20px 30px 20px;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-box-shadow: 0px 9px 0px #AAA;
+    -moz-box-shadow: 0px 9px 0px #AAA;
+    box-shadow: 0px 9px 0px #AAA;
+}
+
+.btn.push:active {
+    -webkit-box-shadow: 0px 4px 0px #AAA;
+    -moz-box-shadow: 0px 4px 0px #AAA;
+    box-shadow: 0px 4px 0px #AAA;
+    top: 3px;
+    transition: all 0.1s;
+}
+
+.btn.fill:hover {
+	color: #fff !important;
+	opacity: 1;
+}
+
+.btn.red.fill:hover {
+	background-color: red;
+}
+
+.btn.blue.fill:hover {
+	background-color: blue;
+}
+
+.btn.green.fill:hover {
+	background-color: green;
+}
+
+.btn.yellow.fill:hover {
+	background-color: yellow;
+}
+
+.btn.orange.fill:hover {
+	background-color: orange;
+}
+
+.btn.purple.fill:hover {
+	background-color: purple;
+}
+
+.btn.black.fill:hover {
+	background-color: black;
+}
+
+.btn.aqua.fill:hover {
+	background-color: aqua;
+}
+
+.btn:hover {
+	opacity: 0.5;
+}
+
+.btn.red {
+	border-color: red;
+	color: red;
+}
+
+.btn.blue {
+	border-color: blue;
+	color: blue;
+}
+
+.btn.green {
+	border-color: green;
+	color: green;
+}
+
+.btn.yellow {
+	border-color: yellow;
+	color: yellow;
+}
+
+.btn.orange {
+	border-color: orange;
+	color: orange;
+}
+
+.btn.purple {
+	border-color: purple;
+	color: purple;
+}
+
+.btn.black {
+	border-color: black;
+	color: black;
+}
+
+.btn.aqua {
+	border-color: aqua;
+	color: aqua;
+}
+
+.btn.nocol {
+	color: #CCC !important;
+}
+
+.btn.nobor {
+	border-color: #CCC !important;
+}
+
+.btn.caps {
+	text-transform: uppercase;
+}
+
+.btn.sm-caps {
+	font-variant: small-caps;
+}
+
+
+/* ==== Media Queries ==== */
+
+@media screen and (max-width: 850px) {
+	.nav a:not(.nav-logo) {
+		padding: 10px 10px 10px 15px;
+	}
+
 	.nav ul a:not(.dropdown) {
 		display: block;
 	}
@@ -330,6 +510,10 @@ a:hover {
 	}
 
 	.sec {
-		margin-top: 119px;
+		margin-top: 150px;
+	}
+
+	.sec ~ .sec {
+		margin-top: 0;
 	}
 }

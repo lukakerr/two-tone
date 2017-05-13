@@ -1,4 +1,4 @@
-<h1>Two Tone Documentation </h1>
+<h1>Two Tone Documentation</h1>
 
 <h2>Total Dark Mode</h2>
 
