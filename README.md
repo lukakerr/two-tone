@@ -1,6 +1,6 @@
-#Two Tone Documentation
+<h1>Two Tone Documentation</h1>
 
-##Standard Navigation
+<h2>Standard Navigation</h2>
 
 ```
 <div class="nav"> <!-- Dark Mode: <div class="nav dark"> -->
@@ -23,7 +23,7 @@
 </div>
 ```
 
-##Mobile Navigation
+<h2>Mobile Navigation</h2>
 
 ```
 <div class="mob-nav">
@@ -41,7 +41,7 @@
 </div>
 ```
 
-##Multipe Sections
+<h2>Multiple Sections</h2>
 
 ```
 <div class="sec"> <!-- Dark Mode: <div class="sec dark"> -->
@@ -57,7 +57,7 @@
 </div>
 ```
 
-##Variable Width Columns
+<h2>Variable Width Columns</h2>
 
 ```
 <ul class="col"> <!-- Dark Mode: <ul class="col dark"> -->
@@ -67,7 +67,7 @@
 </ul>
 ```
 
-####Spacing between columns
+<h4>Spacing between columns</h4>
 
 ```
 <ul class="col pd">
