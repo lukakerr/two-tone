@@ -1,5 +1,11 @@
 <h1>Two Tone Documentation </h1>
 
+<h2>Total Dark Mode</h2>
+
+```
+<body class="dark">
+```
+
 <h2>Standard Navigation</h2>
 
 ```
@@ -26,7 +32,7 @@
 <h2>Mobile Navigation</h2>
 
 ```
-<div class="mob-nav">
+<div class="mob-nav"> <!-- Dark Mode: <div class="mob-nav dark"> -->
 	<input type="checkbox">
 	<span></span>
 	<span></span>
