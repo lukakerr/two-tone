@@ -1,15 +1,18 @@
 <h1>Two Tone Documentation</h1>
 
-<h2>Total Dark Mode</h2>
+<h2>Different Body Themes</h2>
 
 ```
-<body class="dark">
+<body class="dark"> <!-- Dark Theme -->
+<body class="narrow"> <!-- Narrow Theme -->
 ```
 
 <h2>Standard Navigation</h2>
 
+The stardard nav bar can be fixed by adding class `fixed`, can be made into a dark theme by adding class `dark` or centered by adding class `centered`. These classes can be combined, for example to create a centered fixed dark nav bar.
+
 ```
-<div class="nav"> <!-- Dark Mode: <div class="nav dark"> -->
+<div class="nav">
 	<ul>
 		<a href="#" class="nav-logo">Website Name</a>
 		<a href="#">Item #1</a>
@@ -84,10 +87,150 @@
 <ul class="col pd dark center"> <!-- Combinations are available -->
 ```
 
+<h2>Tabs</h2>
+
+```
+<div class="tabs">
+	<div class="tab">
+		<input type="radio" id="t1" name="tg1" checked>
+		<label for="t1">Tab One</label>
+
+		<div class="content">
+			<p>Content for Tab One</p>
+		</div> 
+	</div>
+
+	<div class="tab">
+		<input type="radio" id="t2" name="tg1">
+		<label for="t2">Tab Two</label>
+
+		<div class="content">
+			<p>Content for Tab Two</p>
+		</div> 
+	</div>
+
+	<div class="tab">
+		<input type="radio" id="t3" name="tg1">
+		<label for="t3">Tab Three</label>
+
+		<div class="content">
+			<p>Content for Tab Three</p>
+		</div> 
+	</div>
+</div> 
+```
+
 <h2>Padding/Margin Options</h2>
 
 ```
 <!-- Add 15px margins to every element by adding the pd class -->
 <input class="pd">
 <ul class="col pd"></ul>
+<div class="alert success pd">Success</div>
+<div class="tabs pd"></div>
+<input class="pd">
+<textarea class="pd"></textarea>
+<div class="panel pd"></div>
+
+<!-- Make element take up full width of page -->
+<ul class="col full"></ul>
+```
+
+<h2>Alert Banners</h2>
+
+```
+<div class="alert success">Success</div>
+<div class="alert warning">Warning</div>
+<div class="alert error">Error</div>
+<div class="alert info">Info</div>
+```
+
+<h2>Buttons</h2>
+
+There are many different combinations of buttons available. Combine various class names to get different button types.
+<br><br>
+Button class names include:
+<br>
+
+<li>tablet</li>
+<li>square</li>
+<li>quote</li>
+<li>warning</li>
+<li>close</li>
+<li>push</li>
+<li>fill</li>
+<li>sml</li>
+<li>med</li>
+<li>lrg</li>
+<li>xlrg</li>
+<li>red</li>
+<li>blue</li>
+<li>green</li>
+<li>yellow</li>
+<li>orange</li>
+<li>purple</li>
+<li>black</li>
+<li>aqua</li>
+<li>nocol</li>
+<li>nobor</li>
+<li>caps</li>
+<li>sm-caps</li>
+
+```
+<button class="btn tablet red sm-caps">Tablet Button</button>
+<button class="btn square caps">Square Button</button>
+<button class="btn aqua">Button</button>
+<button class="btn push lrg sm-caps">Push Button</button>
+<button class="btn tablet med nocol orange fill sm-caps">Tablet Filling Button</button>
+<button class="btn quote sm-caps med">Quote</button>
+<button class="btn warning lrg">Warning!</button>
+<button class="btn close lrg">Close</button> 
+```
+
+<h2>Inputs</h2>
+
+```
+<input>
+<textarea></textarea>
+```
+
+<h2>Panel</h2>
+
+```
+<div class="panel">
+	<h1>Hello World</h1>
+	<p>This is some text</p>
+	<button class="btn tablet">Go!</button>
+</div>
+```
+
+<h2>Grid</h2>
+
+Use the following syntax to create a responsive grid.
+<br><br>
+Add either `grid-2`, `grid-3`, `grid-4` or `grid-6` depending on how many grid objects you want per row.
+
+```
+<div class="grid">
+	<div>
+		<div class="content"></div>
+	</div>
+</div>
+
+<div class="grid grid-2">
+	<div>
+		<div class="content"></div>
+	</div>
+	<div>
+		<div class="content"></div>
+	</div>
+</div>
+```
+
+<h2>Footer</h2>
+
+```
+<div class="footer">
+	...
+</div> 
 ```

@@ -29,10 +29,6 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-*.pd {
-	margin: 15px;
-}
-
 body {
 	font-family: Avenir Next, Avenir, sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -41,6 +37,10 @@ body {
 
 body.dark {
 	background-color: #303030;
+}
+
+body.narrow {
+	margin: 0px 20%;
 }
 
 a {
@@ -63,9 +63,16 @@ a:hover {
 	z-index: 9;
 }
 
-.nav.fixed {
+body:not(.narrow) .nav.fixed {
 	position: fixed;
 	width: 100vw;
+	top: 0;
+}
+
+body.narrow .nav.fixed {
+	position: fixed;
+	right: 20%;
+	left: 20%;
 	top: 0;
 }
 
@@ -267,7 +274,7 @@ a:hover {
 
 .sec {
 	height: auto;
-	min-height: calc(100vh + -97px);
+	/*min-height: calc(100vh + -97px);*/
 	padding: 20px;
 	box-sizing: border-box;
 }
@@ -288,6 +295,14 @@ a:hover {
 	display: flex;
 	display: -ms-flex;
 	display: -webkit-flex;
+}
+
+.col.pd li {
+	margin: 15px;
+}
+
+.col.full, body.narrow .col {
+	margin: -20px;
 }
 
 .col li {
@@ -325,14 +340,19 @@ a:hover {
 	height: 35px;
 	width: auto;
 	background-color: transparent;
-	border: 1px solid #CCC;
-	color: #CCC;
+	border: 1px solid #666;
+	color: #666;
 	cursor: pointer;
 	margin: 10px 5px 10px 5px;
 	transition: all 0.3s;
 	padding: 5px 25px 5px 25px;
 	font-size: 12px;
 	font-family: Avenir Next;
+}
+
+body.dark .btn {
+	border: 1px solid #CCC;
+	color: #CCC;
 }
 
 .btn.tablet {
@@ -574,7 +594,7 @@ body.dark .tab label {
 	display: none;   
 }
 
-.content {
+.tab .content {
 	position: absolute;
 	flex: 3;
 	top: -1px;
@@ -587,7 +607,7 @@ body.dark .tab label {
 	opacity: 0;
 }
 
-body.dark .tabs, body.dark .content {
+body.dark .tabs, body.dark .tab .content {
 	background: #999;
 }
 
@@ -663,6 +683,90 @@ body.dark .alert.info {
 	border: 1px solid #6fbadc;
 }
 
+/* ==== Panel ==== */
+
+.panel {
+	min-height: 200px;
+	height: auto;
+	background-color: #E6E6E6;
+	margin: -20px -20px 20px -20px;
+	padding: 50px;
+}
+
+.panel h1 {
+	font-size: 40px;
+	font-weight: 600;
+	padding: 10px 0;
+}
+
+.panel p {
+	padding: 10px 0;
+}
+
+.panel.pd {
+	padding: 50px 65px;
+}
+
+body.dark .panel {
+	background-color: #292929;
+}
+
+body.dark h1, body.dark p {
+	color: #CCC;
+}
+
+/* ==== Grid ==== */
+
+.grid {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	margin-left: -1em;
+	text-align: center;
+}
+
+.grid > div {
+	flex: 1;
+	padding-left: 1em;
+}
+
+.grid.pd {
+	margin: 15px;
+}
+
+.grid .content {
+	padding: 10px;
+	min-height: 22px;
+	margin-bottom: 20px;
+	border: 1px solid #BBB;
+	color: #555;
+}
+
+body.dark .grid .content {
+	border: 1px solid #AAA;
+	color: #CCC;
+}
+
+.grid-2 > div {
+	flex: 0 0 100%;
+	flex: 1;
+}
+
+.grid-3 > div {
+	flex: 0 0 100%;
+	flex: 1;
+}
+
+.grid-4 > div {
+	flex: 0 0 100%;
+	flex: 1;
+}
+
+.grid-6 > div {
+	flex: 0 0 calc(50% - 1em);
+	flex: 1;
+}
+
 /* ==== Footer ==== */
 
 .footer {
@@ -676,6 +780,32 @@ body.dark .alert.info {
 
 
 /* ==== Media Queries ==== */
+
+@media screen and (max-width: 1300px) {
+	body.narrow .nav {
+		text-align: center;
+		border: none !important;
+	}
+
+	body.narrow .nav .nav-logo, body.narrow .nav a {
+		margin: 0;
+		padding: 0;
+	}
+
+	body.narrow .nav a:not(.nav-logo) {
+		padding: 10px;
+	}
+
+	body.narrow .nav ul a:not(.dropdown) {
+		display: block;
+	}
+
+	body.narrow .nav .dropdown-content a {
+		margin-left: -30px;
+		margin-top: -5px;
+	}
+
+}
 
 @media screen and (max-width: 750px) {
 	.nav {
