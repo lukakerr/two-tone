@@ -70,11 +70,24 @@
 	<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam posuere rutrum orci, quis accumsan quam mollis vel.</li>
 	<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam posuere rutrum orci, quis accumsan quam mollis vel.</li>
 	<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam posuere rutrum orci, quis accumsan quam mollis vel.</li>
+	<!-- Can add more <li> for more columns -->
 </ul>
 ```
 
-<h4>Spacing between columns</h4>
+<h4>Column options</h4>
 
 ```
-<ul class="col pd">
+<ul class="col pd"> <!-- Spacing -->
+<ul class="col center"> <!-- Centered text -->
+<ul class="col clear"> <!-- Transparent Columns -->
+<ul class="col dark"> <!-- Dark theme -->
+<ul class="col pd dark center"> <!-- Combinations are available -->
+```
+
+<h2>Padding/Margin Options</h2>
+
+```
+<!-- Add 15px margins to every element by adding the pd class -->
+<input class="pd">
+<ul class="col pd"></ul>
 ```

@@ -29,9 +29,14 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+*.pd {
+	margin: 15px;
+}
+
 body {
 	font-family: Avenir Next, Avenir, sans-serif;
 	-webkit-font-smoothing: antialiased;
+	position: relative;
 }
 
 body.dark {
@@ -55,11 +60,21 @@ a:hover {
 	padding: 30px;
 	display: block;
 	border-bottom: 1px solid #BBB;
+	z-index: 9;
 }
 
 .nav.fixed {
 	position: fixed;
 	width: 100vw;
+	top: 0;
+}
+
+.nav.fixed ~ .sec {
+	padding: 117px 20px 20px 20px;
+}
+
+.nav.fixed ~ .sec ~ .sec {
+	padding: 20px;
 }
 
 .nav.centered {
@@ -71,7 +86,7 @@ a:hover {
 }
 
 .nav.dark, body.dark .nav {
-	background-color: #303030;
+	background-color: #393939;
 	border-bottom: 1px solid #111;
 }
 
@@ -232,7 +247,7 @@ a:hover {
 }
 
 .mob-nav.dark .mob-menu, body.dark .mob-nav .mob-menu {
-	background: #404040;
+	background: #393939;
 }
 
 .mob-nav.dark .mob-menu li, body.dark .mob-nav .mob-menu li {
@@ -252,8 +267,8 @@ a:hover {
 
 .sec {
 	height: auto;
-	min-height: calc(100vh + 100px);
-	margin: 20px;
+	min-height: calc(100vh + -97px);
+	padding: 20px;
 	box-sizing: border-box;
 }
 
@@ -269,28 +284,20 @@ a:hover {
 	background-color: #303030;
 }
 
-.sec .col {
+.sec .col, .col {
 	display: flex;
 	display: -ms-flex;
 	display: -webkit-flex;
-	margin: 20px 0 20px 0;
 }
 
-.sec .col {
-	margin-top: 20px;
-}
-
-.sec .col li {
+.col li {
 	background-color: #EEE;
 	padding: 20px;
 	overflow: hidden;
+	flex: 1;
 }
 
-.sec .col.pd li {
-	margin: 0 15px 0 15px;
-}
-
-.sec .col li:nth-child(even), .col li:nth-child(even) {
+.col li:nth-child(even) {
 	background-color: #CCC;
 }
 
@@ -301,6 +308,14 @@ a:hover {
 
 .sec.dark .col li:nth-child(even), .col.dark li:nth-child(even), body.dark .sec .col li:nth-child(even) {
 	background-color: #444;
+}
+
+.col.center {
+	text-align: center;
+}
+
+.col.clear li, body.dark .sec .col.clear li {
+	background-color: transparent;
 }
 
 /* ==== Buttons ==== */
@@ -345,7 +360,7 @@ a:hover {
 }
 
 .btn.quote:before {
-    content: "\275D  ";
+	content: "\275D  ";
 }
 
 .btn.quote:after {
@@ -360,30 +375,29 @@ a:hover {
 }
 
 .btn.close:before {
-    position: relative;
-    content: "\00d7";
-    color: #FFF;
+	position: relative;
+	content: "\00d7  ";
 }
 
 .btn.push {
 	color: black;
-    position: relative;
-    background-color: #CCC;
-    padding: 10px 20px 30px 20px;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    transition: all 0.2s;
-    -webkit-box-shadow: 0px 9px 0px #AAA;
-    -moz-box-shadow: 0px 9px 0px #AAA;
-    box-shadow: 0px 9px 0px #AAA;
+	position: relative;
+	background-color: #CCC;
+	padding: 10px 20px 30px 20px;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	transition: all 0.2s;
+	-webkit-box-shadow: 0px 9px 0px #AAA;
+	-moz-box-shadow: 0px 9px 0px #AAA;
+	box-shadow: 0px 9px 0px #AAA;
 }
 
 .btn.push:active {
-    -webkit-box-shadow: 0px 4px 0px #AAA;
-    -moz-box-shadow: 0px 4px 0px #AAA;
-    box-shadow: 0px 4px 0px #AAA;
-    top: 3px;
-    transition: all 0.1s;
+	-webkit-box-shadow: 0px 4px 0px #AAA;
+	-moz-box-shadow: 0px 4px 0px #AAA;
+	box-shadow: 0px 4px 0px #AAA;
+	top: 3px;
+	transition: all 0.1s;
 }
 
 .btn.fill:hover {
@@ -483,12 +497,199 @@ a:hover {
 	font-variant: small-caps;
 }
 
+/* ==== Inputs ==== */
+
+input, textarea {
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	min-height: 25px;
+	padding-left: 5px;
+	min-width: 250px;
+	transition: .5s;
+	display: block;
+}
+
+textarea {
+	transition: none;
+	min-height: 50px;
+}
+
+input:focus, textarea:focus {
+	box-shadow: 0 0 6px rgba(81, 203, 238, 1);
+	outline: none;
+	transition: .3s;
+}
+
+body.dark label {
+	color: #CCC;
+}
+
+button[type="submit"] {
+	min-width: 80px;
+	height: 30px;
+	width: auto;
+	border: none;
+	cursor: pointer;
+	margin: 10px 5px;
+	padding: 5px 25px 5px 25px;
+	font-size: 12px;
+	font-family: Avenir Next;
+}
+
+button[type="submit"].pd {
+	margin: 15px;
+}
+
+/* ==== Tabs ==== */
+
+.tabs {
+	position: relative;   
+	min-height: 100px;
+	clear: both;
+	margin: 35px 0 25px;
+	background: #E1E1E1;
+}
+
+.tab {
+	float: left;
+}
+
+.tab label {
+	background: #EEE; 
+	padding: 7px 10px; 
+	margin-left: -1px; 
+	position: relative;
+	left: 1px; 
+	top: -29px;
+	-webkit-transition: background-color .1s linear;
+	cursor: pointer;
+}
+
+body.dark .tab label {
+	background: #BBB;
+	color: #444;
+}
+
+.tab [type=radio] {
+	display: none;   
+}
+
+.content {
+	position: absolute;
+	flex: 3;
+	top: -1px;
+	left: 0;
+	background: #E1E1E1;
+	right: 0;
+	bottom: 0;
+	padding: 20px;
+	-webkit-transition: opacity .3s linear;
+	opacity: 0;
+}
+
+body.dark .tabs, body.dark .content {
+	background: #999;
+}
+
+[type=radio]:checked ~ label {
+	background: #E1E1E1;
+	z-index: 2;
+}
+
+body.dark [type=radio]:checked ~ label {
+	background: #999;
+}
+
+[type=radio]:checked ~ label ~ .content {
+	z-index: 1;
+	opacity: 1;
+}
+
+.tabs.pd {
+	margin: 50px 15px 15px 15px;
+}
+
+/* ==== Alerts ==== */
+
+.alert {
+	width: calc(100% - 30px);
+	padding: 15px 10px 15px 20px;
+	margin: 10px 0;
+	border-radius: 5px;
+}
+
+.alert.pd {
+	margin: 15px;
+	width: calc(100% - 60px);
+}
+
+.alert.success {
+	background-color: #DFF0D9;
+	border: 1px solid #D1E9C8;
+}
+
+.alert.warning {
+	background-color: #FCF8E0;
+	border: 1px solid #FCF8C0;
+}
+
+.alert.error {
+	background-color: #F2DEDE;
+	border: 1px solid #E9C8C8;
+}
+
+.alert.info {
+	background-color: #DAEDF6;
+	border: 1px solid #C1E1F0;
+}
+
+body.dark .alert.success {
+	background-color: #a3d392;
+	border: 1px solid #94cc7f;
+}
+
+body.dark .alert.warning {
+	background-color: #f4e48b;
+	border: 1px solid #f7ec55;
+}
+
+body.dark .alert.error {
+	background-color: #d39292;
+	border: 1px solid #cc7f7f;
+}
+
+body.dark .alert.info {
+	background-color: #84c4e1;
+	border: 1px solid #6fbadc;
+}
+
+/* ==== Footer ==== */
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	padding: 20px;
+	width: 100%;
+	background-color: #505050;
+	box-sizing: border-box;
+}
+
 
 /* ==== Media Queries ==== */
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 750px) {
+	.nav {
+		text-align: center;
+		border: none !important;
+	}
+
+	.nav .nav-logo, .nav a {
+		margin: 0;
+		padding: 0;
+	}
+
 	.nav a:not(.nav-logo) {
-		padding: 10px 10px 10px 15px;
+		padding: 10px;
 	}
 
 	.nav ul a:not(.dropdown) {
@@ -496,11 +697,12 @@ a:hover {
 	}
 
 	.nav .dropdown-content a {
-		margin-left: 10px;
+		margin-left: -30px;
+		margin-top: -5px;
 	}
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 510px) {
 	.mob-nav, .mob-nav input, .mob-nav span {
 		display: block;
 	}
