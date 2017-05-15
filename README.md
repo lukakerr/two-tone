@@ -122,8 +122,9 @@ The stardard nav bar can be fixed by adding class `fixed`, can be made into a da
 
 <h2>Padding/Margin Options</h2>
 
+Add margins to most elements by adding the pd class
+
 ```
-<!-- Add 15px margins to every element by adding the pd class -->
 <input class="pd">
 <ul class="col pd"></ul>
 <div class="alert success pd">Success</div>
@@ -176,6 +177,7 @@ Button class names include:
 <li>caps</li>
 <li>sm-caps</li>
 
+
 ```
 <button class="btn tablet red sm-caps">Tablet Button</button>
 <button class="btn square caps">Square Button</button>
@@ -185,13 +187,6 @@ Button class names include:
 <button class="btn quote sm-caps med">Quote</button>
 <button class="btn warning lrg">Warning!</button>
 <button class="btn close lrg">Close</button> 
-```
-
-<h2>Inputs</h2>
-
-```
-<input>
-<textarea></textarea>
 ```
 
 <h2>Panel</h2>
