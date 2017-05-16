@@ -1,2 +1,2 @@
-/.sass-cache/*
-.style.css.map
+/src/.sass-cache/*
+/dist/style.css.map
