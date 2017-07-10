@@ -2,7 +2,7 @@
 
 <h2>Different Body Themes</h2>
 
-```
+```html
 <body class="dark"> <!-- Dark Theme -->
 <body class="narrow"> <!-- Narrow Theme -->
 ```
@@ -11,7 +11,7 @@
 
 The stardard nav bar can be fixed by adding class `fixed`, can be made into a dark theme by adding class `dark` or centered by adding class `centered`. These classes can be combined, for example to create a centered fixed dark nav bar.
 
-```
+```html
 <div class="nav">
 	<ul>
 		<a href="#" class="nav-logo">Website Name</a>
@@ -34,7 +34,7 @@ The stardard nav bar can be fixed by adding class `fixed`, can be made into a da
 
 <h2>Mobile Navigation</h2>
 
-```
+```html
 <div class="mob-nav"> <!-- Dark Mode: <div class="mob-nav dark"> -->
 	<input type="checkbox">
 	<span></span>
@@ -52,7 +52,7 @@ The stardard nav bar can be fixed by adding class `fixed`, can be made into a da
 
 <h2>Multiple Sections</h2>
 
-```
+```html
 <div class="sec"> <!-- Dark Mode: <div class="sec dark"> -->
 	...
 </div>
@@ -68,7 +68,7 @@ The stardard nav bar can be fixed by adding class `fixed`, can be made into a da
 
 <h2>Variable Width Columns</h2>
 
-```
+```html
 <ul class="col"> <!-- Dark Mode: <ul class="col dark"> -->
 	<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam posuere rutrum orci, quis accumsan quam mollis vel.</li>
 	<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam posuere rutrum orci, quis accumsan quam mollis vel.</li>
@@ -79,7 +79,7 @@ The stardard nav bar can be fixed by adding class `fixed`, can be made into a da
 
 <h4>Column options</h4>
 
-```
+```html
 <ul class="col pd"> <!-- Spacing -->
 <ul class="col center"> <!-- Centered text -->
 <ul class="col clear"> <!-- Transparent Columns -->
@@ -89,7 +89,7 @@ The stardard nav bar can be fixed by adding class `fixed`, can be made into a da
 
 <h2>Tabs</h2>
 
-```
+```html
 <div class="tabs">
 	<div class="tab">
 		<input type="radio" id="t1" name="tg1" checked>
@@ -124,7 +124,7 @@ The stardard nav bar can be fixed by adding class `fixed`, can be made into a da
 
 Add margins to most elements by adding the pd class
 
-```
+```html
 <input class="pd">
 <ul class="col pd"></ul>
 <div class="alert success pd">Success</div>
@@ -139,7 +139,7 @@ Add margins to most elements by adding the pd class
 
 <h2>Alert Banners</h2>
 
-```
+```html
 <div class="alert success">Success</div>
 <div class="alert warning">Warning</div>
 <div class="alert error">Error</div>
@@ -178,7 +178,7 @@ Button class names include:
 <li>sm-caps</li>
 
 
-```
+```html
 <button class="btn tablet red sm-caps">Tablet Button</button>
 <button class="btn square caps">Square Button</button>
 <button class="btn aqua">Button</button>
@@ -191,7 +191,7 @@ Button class names include:
 
 <h2>Panel</h2>
 
-```
+```html
 <div class="panel">
 	<h1>Hello World</h1>
 	<p>This is some text</p>
@@ -205,7 +205,7 @@ Use the following syntax to create a responsive grid.
 <br><br>
 Add either `grid-2`, `grid-3`, `grid-4` or `grid-6` depending on how many grid objects you want per row.
 
-```
+```html
 <div class="grid">
 	<div>
 		<div class="content"></div>
@@ -224,7 +224,7 @@ Add either `grid-2`, `grid-3`, `grid-4` or `grid-6` depending on how many grid o
 
 <h2>Footer</h2>
 
-```
+```html
 <div class="footer">
 	...
 </div> 
