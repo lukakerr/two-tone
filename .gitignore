@@ -1,3 +1,5 @@
 /src/.sass-cache/*
 /dist/style.css.map
-/config.codekit
+/dist/*.map
+config.codekit
+.sass-cache

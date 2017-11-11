@@ -1,0 +1,33 @@
+/* ==== Alert ==== */
+
+.alert {
+  width: calc(100% - 30px);
+  padding: 15px 10px 15px 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+
+  &.pd {
+    margin: 15px;
+    width: calc(100% - 60px);
+  }
+
+  &.success {
+    background-color: #dff0d9;
+    border: 1px solid #d1e9c8;
+  }
+
+  &.warning {
+    background-color: #fcf8e0;
+    border: 1px solid #fcf8c0;
+  }
+
+  &.error {
+    background-color: #f2dede;
+    border: 1px solid #e9c8c8;
+  }
+
+  &.info {
+    background-color: #daedf6;
+    border: 1px solid #c1e1f0;
+  }
+}

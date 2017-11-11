@@ -1,0 +1,39 @@
+/* ==== Section ==== */
+
+.sec {
+  height: auto;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+
+  &:nth-child(even) {
+    background: $sec-light;
+  }
+
+  &.dark {
+    background: $dark;
+
+    &:nth-child(even) {
+      background: $sec-dark;
+    }
+
+    .col {
+      li {
+        background-color: #888;
+        color: $a-dark;
+
+        &:nth-child(even) {
+          background: #444;
+        }
+      }
+    }
+  }
+  
+  .panel {
+    margin: -20px -20px 20px -20px;
+  }
+
+  .col {
+    @include flex();
+  }
+}

@@ -1,0 +1,48 @@
+/* ==== Mixins ==== */
+
+@mixin flex() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin justify-content($pos) {
+  -webkit-justify-content: $pos;
+  justify-content: $pos;
+}
+
+@mixin align-items($pos) {
+  -webkit-align-items: $pos;
+  align-items: $pos;
+}
+
+@mixin align-content($pos) {
+  -webkit-align-content: $pos;
+  align-content: $pos;
+}
+
+@mixin flex-wrap($wrap) {
+  -webkit-flex-wrap: $wrap;
+  flex-wrap: $wrap;
+}
+
+@mixin user-select-none() {
+  -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@mixin transition($speed) {
+  -webkit-transition: all $speed;
+  -moz-transition: all $speed;
+  transition: all $speed;
+}
+
+@mixin box-shadow($shadows...) {
+    -moz-box-shadow: $shadows;
+    -webkit-box-shadow: $shadows;
+    box-shadow: $shadows;
+}

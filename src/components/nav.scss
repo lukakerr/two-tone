@@ -1,0 +1,200 @@
+/* ==== Nav ==== */
+
+.nav {
+  background: $light-nav;
+  padding: 30px;
+  display: block;
+  border-bottom: 1px solid #BBB;
+  z-index: 9;
+
+  a {
+    padding: 0 15px;
+    font-weight: 400;
+  }
+
+  .nav-logo {
+    font-size: 26px;
+    padding-right: 50px;
+    font-weight: 500;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+
+    &:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      min-width: 160px;
+      padding-top: 5px;
+
+      a {
+        border-bottom: 1px solid #EEE;
+        display: block;
+        background: $dropdown-bg;
+        padding: 12px 16px;
+        z-index: 1;
+        margin-left: 15px;
+      }
+    }
+  }
+
+  &.fixed ~ .sec {
+    padding: 117px 20px 20px 20px;
+  }
+
+  &.fixed ~ .sec ~ .sex {
+    padding: 20px;
+  }
+
+  &.centered {
+    @include flex();
+    @include justify-content(center);
+    @include align-items(center);
+    @include align-content(center);
+    @include flex-wrap(wrap);
+  }
+
+  &.dark {
+    background: $dark-nav;
+    border-bottom: 1px solid #111;
+
+    a {
+      color: $a-dark;
+    }
+
+    a:hover {
+      color: $a-dark-hover;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      min-width: 160px;
+      padding-top: 5px;
+
+      a {
+        border-bottom: 1px solid #555;
+        background: #333;
+      }
+    }
+  }
+}
+
+/* ==== Mobile Nav ==== */
+
+.mob-nav {
+  display: none;
+  left: 50px;
+  position: fixed;
+  top: 50px;
+  z-index: 1;
+  @include user-select-none();
+
+  .mob-nav-logo {
+    position: absolute;
+    left: 60px;
+    top: -2px;
+    width: 100vw;
+    font-size: 20px;
+  }
+
+  input {
+    cursor: pointer;
+    display: none;
+    height: 32px;
+    left: -5px;
+    opacity: 0;
+    position: absolute;
+    top: -7px;
+    width: 40px;
+    z-index: 2;
+    -webkit-touch-callout: none;
+
+    &:checked ~ span {
+      background: $a-dark;
+      opacity: 1;
+      transform: rotate(45deg) translate(-2px, -1px);
+
+      &:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(.2, .2);
+      }
+
+      &:nth-last-child(2) {
+        opacity: 1;
+        transform: rotate(-45deg) translate(0, -1px);
+      }
+    }
+
+    &:checked ~ ul {
+      opacity: 1;
+      transform: scale(1.0, 1.0);
+    }
+  }
+
+  span {
+    background: $mob-nav-burger-light;
+    border-radius: 3px;
+    display: none;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    transform-origin: 4px 0;
+    transition: transform .5s cubic-bezier(.77,.2,.05,1.0),
+    background .5s cubic-bezier(.77,.2,.05,1.0),
+    opacity .5s ease;
+    width: 33px;
+    z-index: 1;
+
+    &:first-child {
+      transform-origin: 0 0;
+    }
+
+    &:nth-last-child(2) {
+      transform-origin: 0 100%;
+    }
+  }
+
+  &.dark {
+    span {
+      background: $mob-nav-burger-dark;
+    }
+
+    .mob-nav-logo {
+      color: #777;
+    }
+
+    .mob-menu {
+      color: $dark-nav;
+    }
+  }
+
+  .mob-menu {
+    background: $light-nav;
+    list-style-type: none;
+    margin: -100px 0 0 -50px;
+    padding-top: 120px;
+    padding-bottom: 50px;
+    position: absolute;
+    transform: translate(0, -100%);
+    transform-origin: 0 0;
+    transition: transform .5s cubic-bezier(.77,.2,.05,1.0);
+    width: 100vw;
+    height: auto;
+
+    li {
+      color: $a;
+      padding: 20px 0 0 50px;
+      font-size: 18px;
+
+      &:hover {
+        color: $a-dark-hover;
+      }
+    }
+  }
+}

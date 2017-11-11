@@ -1,0 +1,54 @@
+/* ==== Grid ==== */
+
+.grid {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  margin-left: -1em;
+  text-align: center;
+
+  >div {
+    flex: 1;
+    padding-left: 1em;
+  }
+
+  .content {
+    padding: 10px;
+    min-height: 22px;
+    margin-bottom: 20px;
+    border: 1px solid #BBB;
+    color: #555;
+  }
+}
+
+.grid.pd {
+  margin: 15px;
+}
+
+.grid-2 {
+  >div {
+    flex: 0 0 100%;
+    flex: 1;
+  }
+}
+
+.grid-3 {
+  >div {
+    flex: 0 0 100%;
+    flex: 1;
+  }
+}
+
+.grid-4 {
+  >div {
+    flex: 0 0 100%;
+    flex: 1;
+  }
+}
+
+.grid-6 {
+  >div {
+    flex: 0 0 calc(50% - 1em);
+    flex: 1;
+  }
+}

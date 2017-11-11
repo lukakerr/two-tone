@@ -1,0 +1,48 @@
+/* ==== Column ==== */
+
+.col {
+  @include flex();
+
+  li {
+    background: #EEE;
+    padding: 20px;
+    overflow: hidden;
+    flex: 1;
+
+    &:nth-child(even) {
+      background: #CCC;
+    }
+  }
+
+  &.pd {
+    li {
+      margin: 15px;
+    }
+  }
+
+  &.full {
+    margin: -20px;
+  }
+
+  &.dark {
+    li {
+      background: #888;
+      color: $a-dark;
+
+      &:nth-child(even) {
+        background: #444;
+      }
+
+    }
+  }
+
+  &.center {
+    text-align: center;
+  }
+
+  &.clear {
+    li {
+      background-color: transparent;
+    }
+  }
+}

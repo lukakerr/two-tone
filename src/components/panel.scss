@@ -1,0 +1,22 @@
+/* ==== Panel ==== */
+
+.panel {
+  min-height: 200px;
+  height: auto;
+  background-color: #E6E6E6;
+  padding: 50px;
+
+  h1 {
+    font-size: 40px;
+    font-weight: 600;
+    padding: 10px 0;
+  }
+
+  p {
+    padding: 10px 0;
+  }
+
+  &.pd {
+    padding: 50px 65px;
+  }
+}

@@ -1,13 +1,17 @@
-<h1>Two Tone Documentation</h1>
+# two-tone
 
-<h2>Different Body Themes</h2>
+Compile `/src` by running `sass src/style.scss dist/style.css` from `/two-tone`.
+
+Watch all `.scss` file changes by running `sass --watch src/style.scss:dist/style.css` from `/two-tone`.
+
+### Different Body Themes
 
 ```html
 <body class="dark"> <!-- Dark Theme -->
 <body class="narrow"> <!-- Narrow Theme -->
 ```
 
-<h2>Standard Navigation</h2>
+### Standard Navigation
 
 The stardard nav bar can be fixed by adding class `fixed`, can be made into a dark theme by adding class `dark` or centered by adding class `centered`. These classes can be combined, for example to create a centered fixed dark nav bar.
 
@@ -21,18 +25,18 @@ The stardard nav bar can be fixed by adding class `fixed`, can be made into a da
 		<a href="#">Item #4</a>
 		<a href="#">Item #5</a>
 		<div class="dropdown">
-		  	<a href="#">Dropdown #1</a>
-		  	<div class="dropdown-content">
-		    	<a href="#">Item #1</a>
-		    	<a href="#">Item #2</a>
-		    	<a href="#">Item #3</a>
-		  	</div>
+		  <a href="#">Dropdown #1</a>
+		  <div class="dropdown-content">
+	    	<a href="#">Item #1</a>
+	    	<a href="#">Item #2</a>
+	    	<a href="#">Item #3</a>
+	  	</div>
 		</div>
 	</ul>
 </div>
 ```
 
-<h2>Mobile Navigation</h2>
+### Mobile Navigation
 
 ```html
 <div class="mob-nav"> <!-- Dark Mode: <div class="mob-nav dark"> -->
@@ -50,7 +54,7 @@ The stardard nav bar can be fixed by adding class `fixed`, can be made into a da
 </div>
 ```
 
-<h2>Multiple Sections</h2>
+### Multiple Sections
 
 ```html
 <div class="sec"> <!-- Dark Mode: <div class="sec dark"> -->
@@ -66,7 +70,7 @@ The stardard nav bar can be fixed by adding class `fixed`, can be made into a da
 </div>
 ```
 
-<h2>Variable Width Columns</h2>
+### Variable Width Columns
 
 ```html
 <ul class="col"> <!-- Dark Mode: <ul class="col dark"> -->
@@ -77,7 +81,7 @@ The stardard nav bar can be fixed by adding class `fixed`, can be made into a da
 </ul>
 ```
 
-<h4>Column options</h4>
+### Column options
 
 ```html
 <ul class="col pd"> <!-- Spacing -->
@@ -87,7 +91,7 @@ The stardard nav bar can be fixed by adding class `fixed`, can be made into a da
 <ul class="col pd dark center"> <!-- Combinations are available -->
 ```
 
-<h2>Tabs</h2>
+### Tabs
 
 ```html
 <div class="tabs">
@@ -120,7 +124,7 @@ The stardard nav bar can be fixed by adding class `fixed`, can be made into a da
 </div> 
 ```
 
-<h2>Padding/Margin Options</h2>
+### Padding/Margin Options
 
 Add margins to most elements by adding the pd class
 
@@ -137,7 +141,7 @@ Add margins to most elements by adding the pd class
 <ul class="col full"></ul>
 ```
 
-<h2>Alert Banners</h2>
+### Alert Banners
 
 ```html
 <div class="alert success">Success</div>
@@ -146,7 +150,7 @@ Add margins to most elements by adding the pd class
 <div class="alert info">Info</div>
 ```
 
-<h2>Buttons</h2>
+### Buttons
 
 There are many different combinations of buttons available. Combine various class names to get different button types.
 <br><br>
@@ -189,7 +193,7 @@ Button class names include:
 <button class="btn close lrg">Close</button> 
 ```
 
-<h2>Panel</h2>
+### Panel
 
 ```html
 <div class="panel">
@@ -199,7 +203,7 @@ Button class names include:
 </div>
 ```
 
-<h2>Grid</h2>
+### Grid
 
 Use the following syntax to create a responsive grid.
 <br><br>
@@ -222,7 +226,7 @@ Add either `grid-2`, `grid-3`, `grid-4` or `grid-6` depending on how many grid o
 </div>
 ```
 
-<h2>Footer</h2>
+### Footer
 
 ```html
 <div class="footer">

@@ -1,0 +1,54 @@
+/* ==== Tab ==== */
+
+.tabs {
+  position: relative;
+  min-height: 100px;
+  clear: both;
+  margin: 35px 0 25px;
+  background: #e1e1e1;
+
+  &.pd {
+    margin: 50px 15px 15px;
+  }
+}
+
+.tab {
+  float: left;
+
+  label {
+    background: #eee;
+    padding: 7px 10px;
+    margin-left: -1px;
+    position: relative;
+    left: 1px;
+    top: -29px;
+    cursor: pointer;
+    @include transition(.1s linear);
+  }
+
+  [type=radio] {
+    display: none;
+  }
+
+  .content {
+    position: absolute;
+    flex: 3;
+    top: -1px;
+    left: 0;
+    background: #e1e1e1;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    opacity: 0;
+  }
+}
+
+[type=radio]:checked ~ label {
+  background: #e1e1e1;
+  z-index: 2;
+
+  ~ .content {
+    z-index: 1;
+    opacity: 1;
+  }
+}

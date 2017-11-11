@@ -1,0 +1,182 @@
+/* ==== Button ==== */
+
+.btn {
+  min-width: 80px;
+  height: 35px;
+  width: auto;
+  background-color: transparent;
+  border: 1px solid #999;
+  color: #999;
+  cursor: pointer;
+  margin: 10px 5px;
+  transition: all .3s;
+  padding: 5px 25px;
+  font-size: 12px;
+  font-family: $font;
+
+  &.tablet {
+    border-radius: 20px;
+  }
+
+  &.square {
+    border-radius: 5px;
+  }
+
+  &.sml {
+    font-size: 10px;
+  }
+
+  &.med {
+    font-size: 14px;
+  }
+
+  &.lrg {
+    font-size: 16px;
+  }
+
+  &.xlrg {
+    font-size: 18px;
+  }
+
+  &.quote {
+    &:before {
+      content: "\275D  ";
+    }
+
+    &:after {
+      content: " \275E";
+    }
+  }
+
+  &.warning {
+    &:before {
+      position: relative;
+      content: "\26A0";
+      bottom: -1px;
+      left: -5px;
+    }
+  }
+
+  &.close {
+    &:before {
+      position: relative;
+      content: "\00d7  ";
+    }
+  }
+
+  &.push {
+    color: black;
+    position: relative;
+    background-color: #CCC;
+    padding: 10px 20px 30px 20px;
+    border: none;
+    @include transition(0.2s);
+    @include box-shadow(0px 9px 0px #AAA);
+
+    &:active {
+      top: 3px;
+      @include box-shadow(0px 4px 0px #AAA);
+      @include transition(.1s);
+    }
+  }
+
+  &.fill {
+    &:hover {
+      color: #fff !important;
+      opacity: 1;
+    }
+  }
+
+  &.red {
+    border-color: red;
+    color: red;
+  }
+
+  &.blue {
+    border-color: blue;
+    color: blue;
+  }
+
+  &.green {
+    border-color: green;
+    color: green;
+  }
+
+  &.yellow {
+    border-color: yellow;
+    color: yellow;
+  }
+
+  &.orange {
+    border-color: orange;
+    color: orange;
+  }
+
+  &.purple {
+    border-color: purple;
+    color: purple;
+  }
+
+  &.black {
+    border-color: black;
+    color: black;
+  }
+
+  &.aqua {
+    border-color: aqua;
+    color: aqua;
+  }
+
+  &.red.fill:hover {
+    background: red;
+  }
+
+  &.blue.fill:hover {
+    background: blue;
+  }
+
+  &.green.fill:hover {
+    background: green;
+  }
+
+  &.yellow.fill:hover {
+    background: yellow;
+  }
+
+  &.orange.fill:hover {
+    background: orange;
+  }
+
+  &.purple.fill:hover {
+    background: purple;
+  }
+
+  &.black.fill:hover {
+    background: black;
+  }
+
+  &.aqua.fill:hover {
+    background: aqua;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &.nocol {
+    color: #CCC !important;
+  }
+
+  &.nobor {
+    border-color: #CCC !important;
+  }
+
+  &.caps {
+    text-transform: uppercase;
+  }
+
+  &.sm-caps {
+    font-variant: small-caps;
+  }
+
+}
